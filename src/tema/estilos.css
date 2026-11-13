@@ -1,0 +1,835 @@
+/* Estilos propios de la aplicacion. */
+
+.contenido {
+  padding: 12px 12px 88px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.contenido.centro {
+  text-align: center;
+}
+
+.bajada {
+  margin: 4px 2px 12px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.titulo-seccion {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 20px 2px 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ion-text-color);
+}
+
+.texto-tenue {
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin: 2px 0 10px;
+}
+
+.linea-datos {
+  font-size: 0.78rem !important;
+  color: #6b7280 !important;
+}
+
+.nota-bloque {
+  display: block;
+  padding: 8px 4px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.error-campo {
+  display: block;
+  padding: 2px 16px 6px;
+}
+
+.boton-barra {
+  background: none;
+  border: 0;
+  color: inherit;
+  padding: 8px;
+  font-size: 1.3rem;
+  display: inline-flex;
+}
+
+/* --- Inicio --- */
+
+.grilla-modulos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tarjeta-modulo {
+  margin: 0;
+  border-radius: var(--radio-tarjeta);
+  box-shadow: var(--sombra-tarjeta);
+}
+
+.tarjeta-modulo ion-card-content {
+  padding: 14px 12px;
+}
+
+.tarjeta-modulo h3 {
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin: 10px 0 2px;
+  color: var(--ion-text-color);
+  line-height: 1.25;
+}
+
+.tarjeta-modulo p {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.circulo-icono {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.badge-modulo {
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.pie-institucional {
+  margin-top: 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+/* --- Avisos de simulacion --- */
+
+.aviso-simulacion {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e40af;
+  border-radius: 10px;
+  padding: 9px 11px;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.aviso-simulacion ion-icon {
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.aviso-pago {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: #fef2f2;
+  border: 2px solid #fca5a5;
+  color: #991b1b;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+.aviso-pago ion-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.aviso-pago strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.aviso-pago p {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+/* --- Estados --- */
+
+.estado {
+  padding: 22px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.estado-encabezado {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.estado-titulo {
+  font-weight: 600;
+  margin: 4px 0 0;
+}
+
+.estado-detalle {
+  font-size: 0.83rem;
+  color: #6b7280;
+  margin: 0 0 8px;
+  max-width: 44ch;
+  line-height: 1.45;
+}
+
+.esqueleto-fila {
+  width: 100%;
+  text-align: left;
+  padding: 8px 4px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* --- Mapa --- */
+
+.mapa {
+  width: 100%;
+  border-radius: var(--radio-tarjeta);
+  overflow: hidden;
+  box-shadow: var(--sombra-tarjeta);
+  z-index: 0;
+}
+
+.marcador-propio .punto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.marcador-usuario .pulso {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.28);
+}
+
+/* --- Fila de acciones --- */
+
+.fila-acciones {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.chip-vivo {
+  font-size: 0.72rem;
+}
+
+.punto-vivo {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #16a34a;
+  margin-right: 6px;
+  animation: latido 1.6s ease-in-out infinite;
+}
+
+@keyframes latido {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .punto-vivo {
+    animation: none;
+  }
+}
+
+.punto-lista {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.columna-derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+/* --- Hoja modal --- */
+
+.hoja {
+  padding: 20px 16px 28px;
+  overflow-y: auto;
+}
+
+.hoja h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.contadores {
+  display: flex;
+  gap: 18px;
+  margin: 14px 0 6px;
+}
+
+.contadores div {
+  display: flex;
+  flex-direction: column;
+}
+
+.contadores strong {
+  font-size: 1.35rem;
+  color: var(--ion-color-primary);
+}
+
+.contadores span {
+  font-size: 0.72rem;
+  color: #6b7280;
+}
+
+.acciones-hoja {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+/* --- Tributaria --- */
+
+.panel-vencimientos {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: var(--radio-tarjeta);
+  padding: 10px 12px;
+  margin-bottom: 12px;
+}
+
+.panel-vencimientos h3 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 6px;
+  font-size: 0.88rem;
+  color: #92400e;
+}
+
+.fila-vencimiento {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 0;
+  border-top: 1px solid #fde68a;
+}
+
+.fila-vencimiento strong {
+  display: block;
+  font-size: 0.82rem;
+}
+
+.fila-vencimiento span {
+  font-size: 0.74rem;
+  color: #6b7280;
+}
+
+.cedulon {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radio-tarjeta);
+  padding: 16px;
+}
+
+.cedulon header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid var(--ion-color-primary);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.cedulon header strong {
+  display: block;
+  font-size: 0.92rem;
+}
+
+.cedulon header span {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.cedulon dl {
+  margin: 0;
+}
+
+.cedulon dl > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px dotted #e5e7eb;
+}
+
+.cedulon dt {
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+.cedulon dd {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-align: right;
+}
+
+.cedulon-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 2px solid #e5e7eb;
+}
+
+.cedulon-total strong {
+  font-size: 1.2rem;
+  color: var(--ion-color-primary);
+}
+
+.cedulon-codigo {
+  font-family: ui-monospace, 'Courier New', monospace;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  text-align: center;
+  background: #f3f4f6;
+  padding: 8px;
+  border-radius: 6px;
+  margin: 12px 0 6px;
+  word-break: break-all;
+}
+
+.acciones-apiladas {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.resumen-pago {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: var(--radio-tarjeta);
+  padding: 14px;
+  box-shadow: var(--sombra-tarjeta);
+  margin-bottom: 8px;
+}
+
+.resumen-pago strong {
+  font-size: 1.25rem;
+  color: var(--ion-color-primary);
+}
+
+.nota-seguridad {
+  font-size: 0.76rem;
+  line-height: 1.45;
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  padding: 0 4px;
+}
+
+.boton-principal {
+  margin-top: 18px;
+}
+
+/* --- Reclamos --- */
+
+.adjuntos {
+  padding: 4px 0;
+}
+
+.miniaturas {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.miniatura {
+  position: relative;
+  width: 76px;
+  height: 76px;
+}
+
+.miniatura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.miniatura button {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  background: #fff;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1.25rem;
+  color: #dc2626;
+  line-height: 0;
+}
+
+.encabezado-reclamo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.encabezado-reclamo h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.descripcion-reclamo {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 10px 2px;
+}
+
+.galeria {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+
+.galeria img {
+  width: 104px;
+  height: 104px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.linea-tiempo {
+  list-style: none;
+  padding: 0 0 0 6px;
+  margin: 6px 0;
+}
+
+.linea-tiempo li {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.linea-tiempo li:not(.ultimo)::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 16px;
+  bottom: 0;
+  width: 2px;
+  background: #e5e7eb;
+}
+
+.linea-tiempo .punto {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 3px;
+  background: #9ca3af;
+  z-index: 1;
+}
+
+.linea-tiempo .punto.en_curso {
+  background: var(--ion-color-warning);
+}
+.linea-tiempo .punto.resuelto {
+  background: var(--ion-color-success);
+}
+.linea-tiempo .punto.rechazado {
+  background: var(--ion-color-danger);
+}
+
+.linea-tiempo strong {
+  font-size: 0.86rem;
+}
+
+.linea-tiempo p {
+  margin: 2px 0;
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+
+.linea-tiempo small {
+  font-size: 0.72rem;
+  color: #9ca3af;
+}
+
+.caja-demo {
+  background: #f3f4f6;
+  border: 1px dashed #d1d5db;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.caja-demo small {
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.fab-sobre-barra {
+  margin-bottom: 58px;
+}
+
+/* --- Atencion --- */
+
+.item-contacto {
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+}
+
+.acciones-contacto {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+/* --- Estacionamiento --- */
+
+.panel-temporizador {
+  background: #fff;
+  border-radius: var(--radio-tarjeta);
+  box-shadow: var(--sombra-tarjeta);
+  padding: 22px 16px;
+  text-align: center;
+}
+
+.panel-temporizador > ion-icon {
+  font-size: 2rem;
+  color: var(--ion-color-primary);
+}
+
+.panel-temporizador h2 {
+  font-size: 2.6rem;
+  margin: 6px 0 2px;
+  color: var(--ion-color-primary);
+}
+
+.panel-temporizador p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.acciones-temporizador {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.selector-tiempo {
+  padding: 8px 16px;
+}
+
+/* --- Avisos --- */
+
+.aviso-sin-leer {
+  --background: #f0f9ff;
+}
+
+.punto-sin-leer {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ion-color-danger);
+  margin-right: 6px;
+}
+
+.cuerpo-aviso {
+  white-space: normal !important;
+  line-height: 1.4;
+}
+
+.panel-canal {
+  background: #fff;
+  border-radius: var(--radio-tarjeta);
+  box-shadow: var(--sombra-tarjeta);
+  padding: 14px;
+}
+
+.panel-canal dl {
+  margin: 0 0 10px;
+}
+
+.panel-canal dl > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  border-bottom: 1px dotted #e5e7eb;
+  font-size: 0.82rem;
+}
+
+.panel-canal dt {
+  color: #6b7280;
+}
+
+.panel-canal dd {
+  margin: 0;
+  font-weight: 500;
+}
+
+.caja-token {
+  margin-top: 12px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.caja-token code {
+  display: block;
+  font-size: 0.68rem;
+  word-break: break-all;
+  background: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  margin: 6px 0 8px;
+  max-height: 96px;
+  overflow-y: auto;
+}
+
+/* --- Barra inferior --- */
+
+.barra-inferior nav {
+  display: flex;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.barra-inferior button {
+  flex: 1;
+  background: none;
+  border: 0;
+  padding: 7px 0 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: #6b7280;
+  font-size: 0.68rem;
+}
+
+.barra-inferior button.activo {
+  color: var(--ion-color-primary);
+  font-weight: 600;
+}
+
+.barra-inferior ion-icon {
+  font-size: 1.3rem;
+}
+
+.icono-con-globo {
+  position: relative;
+  display: inline-flex;
+}
+
+.globo {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  background: var(--ion-color-danger);
+  color: #fff;
+  border-radius: 9px;
+  font-size: 0.6rem;
+  min-width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+}
+
+/* --- Impresion del cedulon --- */
+
+@media print {
+  ion-header,
+  ion-footer,
+  .aviso-simulacion,
+  .acciones-apiladas,
+  .barra-inferior {
+    display: none !important;
+  }
+
+  .contenido {
+    padding: 0;
+  }
+
+  .cedulon {
+    border: 1px solid #000;
+  }
+}
+
+/* --- Pantallas anchas --- */
+
+@media (min-width: 720px) {
+  .grilla-modulos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "comment": "La aplicacion es de una sola pagina: cualquier ruta profunda (por ejemplo /reclamos/RE-2026-0502, compartida o recargada) tiene que devolver index.html y dejar que el ruteo del cliente resuelva. Sin esta regla, recargar en una ruta distinta de la raiz da 404.",
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "comment": "Los archivos con huella en el nombre nunca cambian de contenido, asi que pueden cachearse para siempre. Es lo que evita que una visita repetida vuelva a descargar el megabyte de Ionic.",
+        "source": "/assets/**",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      },
+      {
+        "comment": "Los dos service workers y el manifiesto NO deben cachearse: si el navegador sirve una copia vieja del service worker, la aplicacion queda clavada en una version anterior.",
+        "source": "/(sw.js|firebase-messaging-sw.js|manifest.webmanifest)",
+        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      }
+    ]
+  }
+}

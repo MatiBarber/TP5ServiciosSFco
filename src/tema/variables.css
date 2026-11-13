@@ -1,0 +1,63 @@
+/**
+ * Paleta de la aplicacion.
+ *
+ * El verde institucional se usa como color primario. La paleta se define con
+ * las variables que Ionic ya consume, de modo que cada componente la toma sin
+ * necesidad de sobrescribir estilos uno por uno.
+ */
+:root {
+  --ion-color-primary: #0b6b3a;
+  --ion-color-primary-rgb: 11, 107, 58;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #0a5e33;
+  --ion-color-primary-tint: #237a4e;
+
+  --ion-color-secondary: #0369a1;
+  --ion-color-secondary-rgb: 3, 105, 161;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #035c8e;
+  --ion-color-secondary-tint: #1c78aa;
+
+  --ion-color-success: #16a34a;
+  --ion-color-success-rgb: 22, 163, 74;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #138f41;
+  --ion-color-success-tint: #2dac5c;
+
+  --ion-color-warning: #d97706;
+  --ion-color-warning-rgb: 217, 119, 6;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255, 255, 255;
+  --ion-color-warning-shade: #bf6905;
+  --ion-color-warning-tint: #dd851f;
+
+  --ion-color-danger: #dc2626;
+  --ion-color-danger-rgb: 220, 38, 38;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #c22121;
+  --ion-color-danger-tint: #e03c3c;
+
+  --ion-background-color: #f5f6f7;
+  --ion-background-color-rgb: 245, 246, 247;
+  --ion-text-color: #1f2933;
+  --ion-text-color-rgb: 31, 41, 51;
+
+  --ion-font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+
+  --radio-tarjeta: 12px;
+  --sombra-tarjeta: 0 1px 3px rgba(15, 23, 42, 0.12);
+}
+
+/**
+ * La aplicacion se fuerza a esquema claro.
+ *
+ * Es una decision y no un olvido: el modo oscuro duplica la superficie a
+ * revisar para el criterio de accesibilidad —cada contraste hay que validarlo
+ * dos veces— y los mapas de OpenStreetMap son claros de todos modos, de modo
+ * que una interfaz oscura alrededor de un mapa claro se ve peor que la
+ * alternativa. Queda anotado como mejora posible.
+ */

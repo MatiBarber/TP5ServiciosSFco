@@ -1,0 +1,135 @@
+/**
+ * Lineas de atencion al vecino.
+ *
+ * Este es el unico modulo del trabajo que no necesita ningun backend: los tres
+ * requisitos de la consigna —llamar, enviar correo e integrar mensajeria— los
+ * resuelven los esquemas de URI tel:, mailto: y https://wa.me/, que el sistema
+ * operativo del telefono despacha a la aplicacion correspondiente.
+ *
+ * Los numeros de emergencia nacionales son reales. Los contactos de las areas
+ * municipales son de demostracion: se marcan con `demostracion: true` para que
+ * la interfaz lo advierta y nadie llame a un numero inventado.
+ */
+
+export const AREAS_DE_ATENCION = [
+  {
+    id: 'emergencias',
+    grupo: 'Emergencias',
+    nombre: 'Emergencias medicas',
+    descripcion: 'Atencion medica de urgencia.',
+    telefono: '107',
+    demostracion: false,
+    icono: 'medkit',
+  },
+  {
+    id: 'bomberos',
+    grupo: 'Emergencias',
+    nombre: 'Bomberos',
+    descripcion: 'Incendios, rescates y derrames.',
+    telefono: '100',
+    demostracion: false,
+    icono: 'flame',
+  },
+  {
+    id: 'policia',
+    grupo: 'Emergencias',
+    nombre: 'Policia',
+    descripcion: 'Emergencias policiales.',
+    telefono: '911',
+    demostracion: false,
+    icono: 'shield',
+  },
+  {
+    id: 'violencia',
+    grupo: 'Emergencias',
+    nombre: 'Violencia familiar y de genero',
+    descripcion: 'Atencion las 24 horas, gratuita y confidencial.',
+    telefono: '144',
+    demostracion: false,
+    icono: 'heart',
+  },
+  {
+    id: 'mesa',
+    grupo: 'Municipalidad',
+    nombre: 'Mesa de entradas',
+    descripcion: 'Tramites generales y derivacion a areas.',
+    telefono: '+543564000000',
+    correo: 'mesadeentradas@ejemplo.gob.ar',
+    whatsapp: '543564000000',
+    horario: 'Lunes a viernes de 7 a 13',
+    demostracion: true,
+    icono: 'document-text',
+  },
+  {
+    id: 'tributaria',
+    grupo: 'Municipalidad',
+    nombre: 'Direccion General Tributaria',
+    descripcion: 'Cedulones, planes de pago y cuentas corrientes.',
+    telefono: '+543564000001',
+    correo: 'tributaria@ejemplo.gob.ar',
+    whatsapp: '543564000001',
+    horario: 'Lunes a viernes de 7 a 13',
+    demostracion: true,
+    icono: 'cash',
+  },
+  {
+    id: 'obras',
+    grupo: 'Municipalidad',
+    nombre: 'Obras Publicas',
+    descripcion: 'Bacheo, pavimento, desagues y veredas.',
+    telefono: '+543564000002',
+    correo: 'obras@ejemplo.gob.ar',
+    whatsapp: '543564000002',
+    horario: 'Lunes a viernes de 7 a 13',
+    demostracion: true,
+    icono: 'construct',
+  },
+  {
+    id: 'servicios',
+    grupo: 'Municipalidad',
+    nombre: 'Servicios Publicos',
+    descripcion: 'Alumbrado, recoleccion y espacios verdes.',
+    telefono: '+543564000003',
+    correo: 'servicios@ejemplo.gob.ar',
+    whatsapp: '543564000003',
+    horario: 'Lunes a viernes de 7 a 13',
+    demostracion: true,
+    icono: 'bulb',
+  },
+  {
+    id: 'transito',
+    grupo: 'Municipalidad',
+    nombre: 'Direccion de Transito',
+    descripcion: 'Infracciones, licencias y estacionamiento medido.',
+    telefono: '+543564000004',
+    correo: 'transito@ejemplo.gob.ar',
+    whatsapp: '543564000004',
+    horario: 'Lunes a viernes de 7 a 13',
+    demostracion: true,
+    icono: 'car',
+  },
+  {
+    id: 'ambiente',
+    grupo: 'Municipalidad',
+    nombre: 'Ambiente y arbolado',
+    descripcion: 'Poda, extraccion y denuncias ambientales.',
+    telefono: '+543564000005',
+    correo: 'ambiente@ejemplo.gob.ar',
+    whatsapp: '543564000005',
+    horario: 'Lunes a viernes de 7 a 13',
+    demostracion: true,
+    icono: 'leaf',
+  },
+  {
+    id: 'alarmas',
+    grupo: 'Seguridad',
+    nombre: 'Alarmas comunitarias',
+    descripcion: 'Altas, bajas y fallas del sistema barrial.',
+    telefono: '+543564000006',
+    correo: 'alarmas@ejemplo.gob.ar',
+    whatsapp: '543564000006',
+    horario: 'Lunes a viernes de 8 a 14',
+    demostracion: true,
+    icono: 'notifications',
+  },
+];
