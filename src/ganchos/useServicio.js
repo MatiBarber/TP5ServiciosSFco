@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useIonViewWillEnter } from '@ionic/react';
 
 /**
  * Gancho unico para consumir la capa de servicios.
@@ -43,6 +44,15 @@ export function useServicio(peticion, dependencias = [], opciones = {}) {
       vigente.current = false;
     };
   }, [recargar]);
+
+  const yaEntro = useRef(false);
+  useIonViewWillEnter(() => {
+    // Ionic no desmonta la pantalla al navegar. Al volver de una pantalla hija
+    // el efecto de montaje no se repite, de modo que los datos quedan viejos.
+    // La primera entrada ya la cubre el efecto de montaje.
+    if (yaEntro.current) recargar();
+    else yaEntro.current = true;
+  });
 
   return { datos, cargando, error, recargar, setDatos };
 }

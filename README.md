@@ -35,7 +35,7 @@ Con 4 GB de memoria, **cerrar Android Studio por completo antes de trabajar acá
 ### 2. Instalar y levantar
 
 ```bash
-cd servicios-sf
+cd servicios-sfco
 npm install
 npm run dev
 ```
@@ -48,7 +48,7 @@ Vite imprime dos direcciones. La de `localhost` sirve para la notebook; la de re
 
 La aplicación funciona entera sin esto. El único módulo que lo necesita es el canal de push.
 
-1. Entrar a [console.firebase.google.com](https://console.firebase.google.com) y crear un proyecto **nuevo**, separado de GestorLiga. Nombre sugerido: `servicios-sf`.
+1. Entrar a [console.firebase.google.com](https://console.firebase.google.com) y crear un proyecto **nuevo**, separado de GestorLiga. Nombre sugerido: `servicios-sfco`.
 2. Dentro del proyecto, agregar una **aplicación web** (el ícono `</>`). No hace falta activar Hosting en ese paso.
 3. Copiar el objeto `firebaseConfig` que muestra la consola.
 4. En la raíz del proyecto, copiar `.env.example` a `.env` y completar los valores:

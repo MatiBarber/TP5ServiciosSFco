@@ -33,12 +33,12 @@ importScripts('https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js'
 importScripts('https://www.gstatic.com/firebasejs/11.0.2/firebase-messaging-compat.js');
 
 firebase.initializeApp({
-  apiKey: 'COMPLETAR',
-  authDomain: 'COMPLETAR.firebaseapp.com',
-  projectId: 'COMPLETAR',
-  storageBucket: 'COMPLETAR.firebasestorage.app',
-  messagingSenderId: 'COMPLETAR',
-  appId: 'COMPLETAR',
+  apiKey: 'AIzaSyAMNSswqnTyvD_TNjjfdlw7dI7tbbKlnyY',
+  authDomain: 'servicios-sfco.firebaseapp.com',
+  projectId: 'servicios-sfco',
+  storageBucket: 'servicios-sfco.firebasestorage.app',
+  messagingSenderId: '312630607486',
+  appId: '1:312630607486:web:197f2b102a4023d1d0e22f',
 });
 
 const mensajeria = firebase.messaging();
@@ -57,7 +57,7 @@ mensajeria.onBackgroundMessage((carga) => {
     body: carga.data?.body ?? '',
     icon: '/iconos/icono-192.png',
     badge: '/iconos/icono-192.png',
-    tag: carga.data?.tipo ?? 'servicios-sf',
+    tag: carga.data?.tipo ?? 'servicios-sfco',
     data: { enlace: carga.data?.enlace ?? '/avisos' },
   };
   return self.registration.showNotification(titulo, opciones);

@@ -10,6 +10,7 @@ import {
   IonNote,
   IonRange,
   IonText,
+  useIonViewWillEnter,
 } from '@ionic/react';
 import { useNavigate } from 'react-router-dom';
 import { locateOutline, timeOutline } from 'ionicons/icons';
@@ -133,12 +134,9 @@ export function Estacionamiento() {
     });
   }
 
-  // Al volver de la pantalla de pago hay que releer la sesion del almacen.
-  useEffect(() => {
-    const actual = estacionamiento.sesionActiva();
-    if (actual && !sesion) setSesion(actual);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  useIonViewWillEnter(() => {
+    setSesion(estacionamiento.sesionActiva());
+  });
 
   const patenteValida = /^[A-Z]{2}\d{3}[A-Z]{2}$|^[A-Z]{3}\d{3}$/.test(
     patente.toUpperCase().trim()

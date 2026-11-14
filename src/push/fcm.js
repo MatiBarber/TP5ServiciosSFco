@@ -200,7 +200,7 @@ export function escucharEnPrimerPlano(oyente) {
 
       cancelar = onMessage(canal, (carga) => {
         oyente({
-          titulo: carga.notification?.title ?? carga.data?.title ?? 'Servicios SF',
+          titulo: carga.notification?.title ?? carga.data?.title ?? 'Servicios SFco',
           cuerpo: carga.notification?.body ?? carga.data?.body ?? '',
           datos: carga.data ?? {},
         });
@@ -238,7 +238,7 @@ export async function avisoLocal(titulo, cuerpo) {
 
   try {
     const registro = await navigator.serviceWorker.getRegistration(ALCANCE_SW);
-    const opciones = { body: cuerpo, icon: '/iconos/icono-192.png', tag: 'servicios-sf-local' };
+    const opciones = { body: cuerpo, icon: '/iconos/icono-192.png', tag: 'servicios-sfco-local' };
 
     if (registro) {
       await registro.showNotification(titulo, opciones);

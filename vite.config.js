@@ -12,7 +12,7 @@ export default defineConfig({
       includeAssets: ['iconos/icono-192.png', 'iconos/icono-512.png'],
       manifest: {
         name: 'Servicios San Francisco',
-        short_name: 'Servicios SF',
+        short_name: 'Servicios SFco',
         description:
           'Acceso a los servicios municipales de la ciudad de San Francisco, Cordoba.',
         lang: 'es-AR',
