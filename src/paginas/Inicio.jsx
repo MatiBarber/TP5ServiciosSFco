@@ -146,7 +146,7 @@ export function Inicio() {
 
         <div className="pie-institucional">
           <IonChip outline>
-            <IonLabel>UTN FRSF</IonLabel>
+            <IonLabel>UTN FRSFco</IonLabel>
           </IonChip>
           <IonText color="medium">
             <small>

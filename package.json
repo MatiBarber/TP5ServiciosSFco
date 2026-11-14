@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Aplicacion web movil de servicios municipales de San Francisco (Cordoba) - TP5 Arquitecturas Moviles UTN FRSF",
+  "description": "Aplicacion web movil de servicios municipales de San Francisco (Cordoba) - TP5 Arquitecturas Moviles UTN FRSFco",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
